@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous"/>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+          .content {
+      flex: 1;
+    }
+
+   .footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: #f1f1f1;
+
+        padding:10px;
+        text-align:center;
+   }
+
+        a {
+            text-decoration: none;
+            color: #007bff;
+        }
+    </style>
+ <nav class="navbar navbar-expand-lg navbar-light bg-info fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Login Form</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'Home' %}">Home</a>
+                </li>
+            </ul>
+        </div>
+ </div>
+</nav>
+</head>
+<body>
+    <!-- Bootstrap Navbar -->
+
+
+    <!-- Your existing login form -->
+    <form action="login" method="post">
+        {% csrf_token %}
+        <input type="text" name="username" placeholder="Enter the username"><br>
+        <input type="password" name="password" placeholder="Enter the password"><br>
+        <input type="submit" value="Login">
+        <p>Don't have an account? <a href="{% url 'register' %}">Register</a></p>
+    </form>
+
+    <!-- Bootstrap JS and Popper.js (optional) -->
+        <div class="footer">
+    <!-- Your footer content goes here -->
+
+      <p>
+        © 2024 All Rights Reserved By
+
+      </p>
+
+  </div>
+
+</body>
+</html>

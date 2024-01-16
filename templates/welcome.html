@@ -1,0 +1,115 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>Success Page</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--                  <h2>{{ message }}</h2>-->
+
+<!--   <a class="nav-link" href="{% url 'Home' %}">Home</a>-->
+
+
+<!--</body>-->
+<!--</html>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmed</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: rgb(173, 216, 230);;
+            padding: 15px;
+            color: white;
+            text-align: right;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background-color:rgb(173, 216, 230);
+            color: white;
+        }
+        .content {
+      flex: 1;
+    }
+
+   .footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: #f1f1f1;
+
+        padding:10px;
+        text-align:center;
+   }
+
+
+        section {
+            text-align: center;
+            margin: 50px 0;
+        }
+
+        .button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: white;
+            color: blue;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+          a {
+            text-decoration: none;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+
+<!--    <header>-->
+        <nav>
+        <a   class="button" href="{%url 'logout' %}">Logout</a>
+         </nav>
+
+
+            <div class="footer">
+    <!-- Your footer content goes here -->
+
+      <p>
+        © 2024 All Rights Reserved By
+<!--        <a href="https://html.design/">Free Html Templates</a>-->
+      </p>
+
+  </div>
+<!--    </header>-->
+
+<!--    <nav>-->
+<!--        <span>Order Confirmed</span>-->
+
+<!--    </nav>-->
+
+    <section>
+
+        <p> WELCOME OUR STUDENT PORTAL</p>
+       <a  class="button" href=" {% url 'index' %}">STUDENT PORTAL</a>
+    </section>
+
+</body>
+</html>
